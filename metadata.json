@@ -1,0 +1,6 @@
+{
+  "name": "ระบบตรวจการรักษาความปลอดภัยข่าวสาร เอกสารลับ",
+  "description": "แบบฟอร์มการตรวจการรักษาความปลอดภัยข่าวสาร เอกสารลับ แนวนอน ใช้งานบน iPad พร้อมระบบแปลงเลขไทย และส่งออกรายงาน PDF ตรงตามแบบฟอร์ม",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

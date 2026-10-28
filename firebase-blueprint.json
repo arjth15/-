@@ -1,0 +1,74 @@
+{
+  "entities": {
+    "inspection": {
+      "title": "Inspection",
+      "description": "Secret document security inspection record",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique inspection ID"
+        },
+        "userId": {
+          "type": "string",
+          "description": "UID of the inspector who created this record"
+        },
+        "userEmail": {
+          "type": "string",
+          "description": "Email address of the inspector"
+        },
+        "inspectionUnit": {
+          "type": "string",
+          "description": "Name of the military/government unit inspected"
+        },
+        "inspectionDate": {
+          "type": "string",
+          "description": "Date of inspection (YYYY-MM-DD)"
+        },
+        "categories": {
+          "type": "array",
+          "description": "List of 4 inspected categories"
+        },
+        "inspectorName": {
+          "type": "string",
+          "description": "Name of the inspector"
+        },
+        "inspectorPosition": {
+          "type": "string",
+          "description": "Position of the inspector"
+        },
+        "inspectorSignatureUrl": {
+          "type": "string",
+          "description": "Data URL or storage URL of signature"
+        },
+        "useThaiNumerals": {
+          "type": "boolean",
+          "description": "Whether Thai numerals are preferred"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last updated timestamp"
+        },
+        "driveFileId": {
+          "type": "string",
+          "description": "Optional Google Drive file ID if uploaded"
+        },
+        "driveFileUrl": {
+          "type": "string",
+          "description": "Optional Google Drive web view link"
+        }
+      },
+      "required": ["id", "userId", "inspectionUnit", "inspectionDate"]
+    }
+  },
+  "firestore": {
+    "/inspections/{inspectionId}": {
+      "schema": "inspection",
+      "description": "Collection of inspection reports secured per inspector user"
+    }
+  }
+}
